@@ -43,7 +43,16 @@ body{
   border:0;
   color:white;
   font-size:26px;
+  padding:10px;
+  cursor:pointer;
+  position:relative;
+  z-index:1000;
 }
+
+
+
+ 
+
 
 main{
   max-width:900px;
