@@ -137,3 +137,31 @@ main{
   .hero-logo{width:150px;height:150px}
   .grid{grid-template-columns:1fr}
 }
+.bottom-nav{
+  position:fixed;
+  bottom:20px;
+  left:50%;
+  transform:translateX(-50%) translateY(120%);
+  display:flex;
+  gap:10px;
+  padding:12px;
+  background:#0d1420;
+  border:2px solid #ffd43b;
+  border-radius:20px;
+  z-index:9999;
+  opacity:0;
+  pointer-events:none;
+  transition:0.3s ease;
+}
+
+.bottom-nav.show{
+  transform:translateX(-50%) translateY(0);
+  opacity:1;
+  pointer-events:auto;
+}
+
+.bottom-nav a{
+  color:white;
+  text-decoration:none;
+  padding:10px 14px;
+}
