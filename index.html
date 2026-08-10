@@ -123,9 +123,16 @@
 </nav>
 
 <script>
-if ("serviceWorker" in navigator) window.addEventListener("load", () => navigator.serviceWorker.register("sw.js"));
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./sw.js");
+  });
+}
+
 const btn = document.getElementById("menuBtn");
-btn.addEventListener("click", () => document.querySelector(".bottom-nav").classList.toggle("show"));
+const nav = document.querySelector(".bottom-nav");
+
+btn.addEventListener("click", () => {
+  nav.classList.toggle("show");
+});
 </script>
-</body>
-</html>
