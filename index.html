@@ -3,136 +3,137 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#0a0f18">
-  <meta name="description" content="ACM Church - Almighty Christ Ministries">
+  <meta name="theme-color" content="#07111f">
+  <meta name="description" content="ACM Church - Almighty Christ Ministries, Mathur Village, Tamil Nadu">
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="icon" href="icon-192.png">
+  <link rel="icon" href="assets/icon-192.png">
   <link rel="stylesheet" href="style.css">
   <title>ACM Church</title>
 </head>
 <body>
 <header class="topbar">
-  <div class="brand">
-    <img src="logo.png" alt="ACM Church logo">
-    <div><strong>ACM CHURCH</strong><span>Almighty Christ Ministries</span></div>
-  </div>
-  <button class="menu" id="menuBtn" aria-label="Open menu">☰</button>
+  <a class="brand" href="#home" aria-label="ACM Church Home">
+    <img src="assets/logo.png" alt="ACM Church logo">
+    <span><strong>ACM CHURCH</strong><small>Almighty Christ Ministries</small></span>
+  </a>
+  <button id="menuBtn" class="menu" aria-label="Open menu" aria-expanded="false">☰</button>
 </header>
 
+<div id="drawerBackdrop" class="backdrop" hidden></div>
+<aside id="drawer" class="drawer" aria-hidden="true">
+  <button id="closeMenu" class="close" aria-label="Close menu">×</button>
+  <img src="assets/logo.png" alt="" class="drawer-logo">
+  <h2>ACM Church</h2>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#events">Events</a>
+  <a href="#sermons">Sermons</a>
+  <a href="#contact">Contact</a>
+</aside>
+
 <main>
-  <section class="hero">
-    <img class="hero-logo" src="pastor.jpg alt="">
-    <p class="eyebrow">WELCOME TO</p>
-    <h1>ACM <span>CHURCH</span></h1>
-    <p class="tagline">Reaching Souls, Transforming Lives Through Christ.</p>
-    <div class="hero-actions">
-      <a class="btn primary" href="https://youtube.com/@acmchurch" target="_blank" rel="noopener">▶ Watch YouTube</a>
-      <a class="btn" href="https://www.instagram.com/almighty_christ_ministries/" target="_blank" rel="noopener">◎ Instagram</a>
+<section id="home" class="hero">
+  <div class="hero-photo-wrap">
+    <img class="hero-photo" src="assets/pastor.png" alt="Pastor portrait">
+  </div>
+  <p class="eyebrow">WELCOME TO ACM CHURCH</p>
+  <h1>Reaching Souls,<br><span>Transforming Lives</span></h1>
+  <p class="tagline">Through Christ</p>
+  <div class="actions">
+    <a class="btn primary" href="https://youtube.com/@acmchurch?si=Fy_Oea4ahb_wfopJ" target="_blank" rel="noopener">▶ YouTube</a>
+    <a class="btn" href="https://www.instagram.com/almighty_christ_ministries/" target="_blank" rel="noopener">Instagram</a>
+    <a class="btn" href="https://www.facebook.com/share/1DfoxtwSBa/" target="_blank" rel="noopener">Facebook</a>
+  </div>
+</section>
+
+<section class="quote card">
+  <div class="cross">✝</div>
+  <p>“I can do all things through Christ who strengthens me.”</p>
+  <small>Philippians 4:13</small>
+</section>
+
+<section id="about" class="section">
+  <p class="eyebrow">ABOUT US</p>
+  <h2>ACM Church</h2>
+  <div class="about-grid">
+    <img src="assets/church.jpg" alt="ACM Church">
+    <div>
+      <p>Almighty Christ Ministries is committed to reaching souls and transforming lives through Christ.</p>
+      <p>Join us for worship, prayer, fellowship and the Word of God.</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="card verse">
-    <div class="quote">“</div>
-    <p>I can do all things through Christ who strengthens me.</p>
-    <b>Philippians 4:13</b>
-  </section>
+<section id="services" class="section">
+  <p class="eyebrow">WEEKLY SERVICES</p>
+  <h2>Church Schedule</h2>
+  <div class="cards">
+    <article class="service"><b>Sunday Service</b><span>Sunday · 9:00 AM</span></article>
+    <article class="service"><b>Fasting Prayer</b><span>Saturday · 11:00 AM</span></article>
+    <article class="service"><b>Youth Meeting</b><span>Saturday · 7:00 PM</span></article>
+    <article class="service"><b>Women's Fellowship</b><span>Wednesday · 11:00 AM</span></article>
+    <article class="service"><b>Deliverance Meeting</b><span>Every month · New Moon Day</span></article>
+  </div>
+</section>
 
-  <section class="section">
-    <h2>Quick Access</h2>
-    <div class="grid">
-      <a class="tile" href="#about">⛪<span>About Us</span></a>
-      <a class="tile" href="#services">📅<span>Services</span></a>
-      <a class="tile" href="#sermons">▶<span>Sermons</span></a>
-      <a class="tile" href="#prayer">🙏<span>Prayer Request</span></a>
-      <a class="tile" href="#gallery">🖼<span>Gallery</span></a>
-      <a class="tile" href="#contact">📍<span>Contact</span></a>
-    </div>
-  </section>
+<section id="events" class="section alt">
+  <p class="eyebrow">JOIN US</p>
+  <h2>Upcoming Fellowship</h2>
+  <div class="event-card">
+    <div class="event-icon">🙏</div>
+    <div><b>Prayer • Worship • Fellowship</b><p>Everyone is welcome. Come and experience the presence of God.</p></div>
+  </div>
+</section>
 
-  <section id="about" class="section">
-    <h2>About ACM Church</h2>
-    <img class="wide-img" src="assets/church.jpg" alt="ACM Church building">
-    <p>Almighty Christ Ministries (ACM Church) is a Christ-centered ministry committed to reaching people with the Gospel, strengthening believers, and serving the community.</p>
-    <div class="pastor">
-      <img src="assets/pastor.jpg" alt="Pastor">
-      <div><h3>Pastor</h3><p>Almighty Christ Ministries</p></div>
-    </div>
-  </section>
+<section id="sermons" class="section">
+  <p class="eyebrow">WATCH & LISTEN</p>
+  <h2>Sermons & Messages</h2>
+  <p>Watch ACM Church messages on YouTube.</p>
+  <a class="wide-btn" href="https://youtube.com/@acmchurch?si=Fy_Oea4ahb_wfopJ" target="_blank" rel="noopener">Open ACM Church YouTube →</a>
+</section>
 
-  <section id="services" class="section">
-    <h2>Service Schedule</h2>
-    <div class="schedule">
-      <div><b>Sunday Worship</b><span>Sunday · 9:00 AM</span></div>
-      <div><b>Fasting Prayer</b><span>Saturday · 11:00 AM</span></div>
-      <div><b>Youth Meeting</b><span>Saturday · 7:00 PM</span></div>
-      <div><b>Women's Fellowship</b><span>Wednesday · 11:00 AM</span></div>
-      <div><b>Deliverance Meeting</b><span>Every month · New Moon Day</span></div>
-    </div>
-  </section>
-
-  <section id="sermons" class="section">
-    <h2>Sermons & Live</h2>
-    <div class="media-card">
-      <div class="media-icon">▶</div>
-      <div><h3>ACM Church YouTube</h3><p>Watch sermons, worship and live services.</p></div>
-    </div>
-    <a class="btn primary full" href="https://youtube.com/@acmchurch" target="_blank" rel="noopener">Open YouTube Channel</a>
-  </section>
-
-  <section id="prayer" class="section">
-    <h2>Prayer Request</h2>
-    <p>Send your prayer request directly to ACM Church on WhatsApp.</p>
-    <a class="btn primary full" href="https://wa.me/919894751914?text=Praise%20the%20Lord.%20I%20would%20like%20to%20request%20prayer.%0A%0AName%3A%20%0APhone%3A%20%0APrayer%20Request%3A%20" target="_blank" rel="noopener">🙏 Request Prayer on WhatsApp</a>
-  </section>
-
-  <section id="gallery" class="section">
-    <h2>Gallery</h2>
-    <div class="gallery">
-      <img src="assets/church.jpg" alt="Church">
-      <img src="assets/pastor.jpg" alt="Pastor">
-    </div>
-  </section>
-
-  <section id="contact" class="section">
-    <h2>Contact Us</h2>
-    <div class="contact">
-      <p>📍 Mathur Village (Opp. Cheyyar SIPCOT)<br>Vembakkam Taluk, Thiruvannamalai District<br>Tamil Nadu, South India – 631701</p>
-      <a href="tel:+918012735107">📞 8012735107</a>
-      <a href="https://wa.me/919894751914" target="_blank" rel="noopener">💬 WhatsApp: 9894751914</a>
-      <a href="https://www.google.com/maps/search/?api=1&query=Mathur+Village+Opp+Cheyyar+SIPCOT+Vembakkam+Taluk+Tamil+Nadu+631701" target="_blank" rel="noopener">🗺 Open in Google Maps</a>
-    </div>
-  </section>
-
-  <section class="section social">
-    <h2>Stay Connected</h2>
-    <div class="social-row">
-      <a class="social-btn" href="https://youtube.com/@acmchurch" target="_blank" rel="noopener">YouTube</a>
-      <a class="social-btn" href="https://www.instagram.com/almighty_christ_ministries/" target="_blank" rel="noopener">Instagram</a>
-      <a class="social-btn" href="https://www.facebook.com/share/1DfoxtwSBa/" target="_blank" rel="noopener">Facebook</a>
-    </div>
-    <p class="muted">Facebook is now connected.</p>
-  </section>
+<section id="contact" class="section contact">
+  <p class="eyebrow">CONTACT</p>
+  <h2>Come & Worship With Us</h2>
+  <p>Mathur Village (Opp. Cheyyar SIPCOT)<br>Vembakkam Taluk, Thiruvannamalai District<br>Tamil Nadu, South India 631 701</p>
+  <div class="contact-buttons">
+    <a class="wide-btn" href="tel:8012735107">📞 80127 35107</a>
+    <a class="wide-btn" href="https://wa.me/919894751914" target="_blank" rel="noopener">💬 WhatsApp 98947 51914</a>
+  </div>
+</section>
 </main>
 
-<nav class="bottom-nav">
-  <a href="#">⌂<span>Home</span></a>
-  <a href="#services">📅<span>Services</span></a>
-  <a href="#sermons">▶<span>Sermons</span></a>
-  <a href="#prayer">🙏<span>Prayer</span></a>
-  <a href="#contact">☻<span>More</span></a>
+<nav class="bottom-nav" aria-label="Main navigation">
+  <a href="#home">⌂<span>Home</span></a>
+  <a href="#about">✝<span>About</span></a>
+  <a href="#services">◷<span>Services</span></a>
+  <a href="#events">♡<span>Events</span></a>
+  <a href="#contact">☏<span>Contact</span></a>
 </nav>
 
 <script>
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", () => {
-    navigator.serviceWorker.register("./sw.js");
-  });
+(function(){
+  const btn = document.getElementById('menuBtn');
+  const drawer = document.getElementById('drawer');
+  const backdrop = document.getElementById('drawerBackdrop');
+  const close = document.getElementById('closeMenu');
+
+  function setMenu(open){
+    drawer.classList.toggle('open', open);
+    backdrop.hidden = !open;
+    drawer.setAttribute('aria-hidden', String(!open));
+    btn.setAttribute('aria-expanded', String(open));
+    document.body.classList.toggle('locked', open);
+  }
+  btn.addEventListener('click', () => setMenu(true));
+  close.addEventListener('click', () => setMenu(false));
+  backdrop.addEventListener('click', () => setMenu(false));
+  drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+})();
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js'));
 }
-
-const btn = document.getElementById("menuBtn");
-const nav = document.querySelector(".bottom-nav");
-
-btn.addEventListener("click", () => {
-  nav.classList.toggle("show");
-});
 </script>
+</body>
+</html>
