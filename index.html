@@ -140,12 +140,29 @@
     </div>
     <p>© 2026 ACM Church. Built with faith, love and purpose.</p>
   </footer>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
 
-  <script>
-    const btn = document.getElementById('menuBtn');
-    const nav = document.getElementById('nav');
-    btn.addEventListener('click', () => nav.classList.toggle('open'));
-    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
-  </script>
+    const btn = document.getElementById("menuBtn");
+    const nav = document.getElementById("nav");
+
+    if (!btn || !nav) {
+        console.log("Menu button or navigation not found");
+        return;
+    }
+
+    btn.addEventListener("click", function () {
+        nav.classList.toggle("open");
+    });
+
+    nav.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+            nav.classList.remove("open");
+        });
+    });
+
+});
+</script>
+  
 </body>
 </html>
