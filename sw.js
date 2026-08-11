@@ -1,19 +1,4 @@
-const CACHE="acm-church-complete-v1";
-const ASSETS=[
-  "./","./index.html","./style.css","./manifest.webmanifest",
-  "./assets/logo.png","./assets/church.jpg","./assets/pastor.png",
-  "./assets/icon-192.png","./assets/icon-512.png"
-];
-self.addEventListener("install",event=>{
-  event.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)).then(()=>self.skipWaiting()));
-});
-self.addEventListener("activate",event=>{
-  event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()));
-});
-self.addEventListener("fetch",event=>{
-  event.respondWith(caches.match(event.request).then(cached=>cached||fetch(event.request).then(response=>{
-    const copy=response.clone();
-    caches.open(CACHE).then(c=>c.put(event.request,copy));
-    return response;
-  }).catch(()=>cached)));
-});
+const CACHE='acm-church-v1';
+const ASSETS=['./','./index.html','./style.css','./assets/church-logo.jpg','./assets/profile-white.png','./assets/profile.jpg','./assets/church-group.jpg'];
+self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS))));
+self.addEventListener('fetch',e=>e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request))));
