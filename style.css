@@ -44,7 +44,6 @@ footer{padding:40px clamp(20px,7vw,100px);background:#051329;color:#9fb0c5;displ
   .gallery-grid{
     grid-template-columns:1fr 1fr;
   }
-
   nav{
     display:none;
     position:absolute;
